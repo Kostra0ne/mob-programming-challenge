@@ -1,1 +1,11 @@
 <h1>Title</h1>
+
+<ul class="list">
+    {{!-- this is the list itself, sent as argument --}}
+    {{#each users}}
+    {{!-- this is each rockstar --}}
+    <li class="item">{{this.name}}</li>
+    <li class="item">{{this.email}}</li>
+    <li class="item">{{this.favoriteLangage}}</li>
+    {{/each}}
+</ul>
