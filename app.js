@@ -2,6 +2,15 @@ console.log("Hello world!");
 
 require("dotenv").config();
 const dataBase = require("./config/mongo.js");
+const users = [
+  {
+    name: "John",
+    email: "john@john.com",
+    favoriteLangage: "French",
+  },
+];
+
+const images = ["img/img1.jpg", "img/img2.jpg", "img/img3.jpg"];
 
 const express = require("express");
 const hbs = require("hbs");
@@ -25,17 +34,6 @@ app.get("/my-dev-squad", (req, res) => {
 app.get("/add-new-ironhacker", (req, res) => {
   res.render("formUser", {});
 });
-
-
-const users = [
-  {
-    name: "John",
-    email: "john@john.com",
-    favoriteLangage: "French",
-  },
-];
-
-const images = ["./img/img1.jpg", "./img/img2.jpg", "./img/img3.jpg"];
 
 app.listen(process.env.PORT, () => {
   console.log(
