@@ -35,6 +35,13 @@ app.get("/add-new-ironhacker", (req, res) => {
   res.render("formUser", {});
 });
 
+function displayUser() {
+  for (let i = 0; i < users.length; i++) {
+    return users[i].length;
+  }
+}
+displayUser();
+
 app.listen(process.env.PORT, () => {
   console.log(
     "hey hey hey ready to code & http://localhost:" + process.env.PORT
