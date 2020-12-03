@@ -1,6 +1,6 @@
 console.log("Hello world!");
 
-require('dotenv').config();
+require("dotenv").config();
 const dataBase = require("./config/mongo.js");
 
 const express = require("express");
@@ -10,19 +10,32 @@ app.use(express.static(__dirname + "/public"));
 app.set("views", __dirname + "/views");
 app.set("view engine", "hbs");
 
-hbs.registerPartials(__dirname + "/views/partials"); 
+hbs.registerPartials(__dirname + "/views/partials");
+
+app.get("/", (req, res) => {
+  res.render("home", {
+    images,
+  });
+});
+app.get("/my-dev-squad", (req, res) => {
+  res.render("allUsers", {
+    users,
+  });
+});
+app.get("/add-new-ironhacker", (req, res) => {
+  res.render("formUser", {});
+});
 
 
-const users = [{
+const users = [
+  {
     name: "John",
     email: "john@john.com",
-    favoriteLangage: "French"
+    favoriteLangage: "French",
+  },
+];
 
-}]
-
-const images = ["./img/img1.jpg", "./img/img2.jpg", "./img/img3.jpg"]
-
-
+const images = ["./img/img1.jpg", "./img/img2.jpg", "./img/img3.jpg"];
 
 app.listen(process.env.PORT, () => {
   console.log(
