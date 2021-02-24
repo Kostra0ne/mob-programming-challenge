@@ -11,6 +11,8 @@ app.use(express.static(__dirname + "/public"));
 app.set("views", __dirname + "/views");
 app.set("view engine", "hbs");
 
+hbs.registerPartials(__dirname + "/views/partials");npm
+
 const users = [{
     name:"Mathieu", 
     email: "mathieu@coucou.lesami.es",
@@ -34,18 +36,18 @@ console.log("Hello best team ♥");
 
 //ROUTES
 app.get("/", (req,res)=>{
-    res.render("home"),
+    res.render("home");
     {images} 
 });
 app.get("/my-dev-squad", (req, res)=>{
-    res.render("allUsers"),
+    res.render("allUsers");
     {users}
 });
 app.get("/add-new-ironhacker", (req, res)=>{
-    res.render("formUser")
+    res.render("formUser");
 });
 app.get("*", (req, res)=>{
-    res.send("Sorry not found")
+    res.send("Sorry not found");
 });
 
 //app.get("/api/ironhackers", (req, res)=>{
@@ -55,4 +57,4 @@ app.get("*", (req, res)=>{
 
 app.listen(process.env.PORT, () => {
     console.log("Ready @ http://localhost:" + process.env.PORT);
-})
+});
