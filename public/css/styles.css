@@ -1,0 +1,16 @@
+@import url("mod.image-gallery.css");
+@import url("mod.form.css");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  background-color: rgb(218, 162, 218);
+}
