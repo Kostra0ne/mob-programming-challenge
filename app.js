@@ -32,6 +32,27 @@ const images = ["img/img1.jpg", "img/img2.jpg", "img/img3.jpg"];
 
 console.log("Hello best team ♥");
 
+//ROUTES
+app.get("/", (req,res)=>{
+    res.render("home"),
+    {images} 
+});
+app.get("/my-dev-squad", (req, res)=>{
+    res.render("allUsers"),
+    {users}
+});
+app.get("/add-new-ironhacker", (req, res)=>{
+    res.render("formUser")
+});
+app.get("*", (req, res)=>{
+    res.send("Sorry not found")
+});
+
+//app.get("/api/ironhackers", (req, res)=>{
+//  res.json("users")
+//});
+
+
 app.listen(process.env.PORT, () => {
     console.log("Ready @ http://localhost:" + process.env.PORT);
 })
