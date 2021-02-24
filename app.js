@@ -13,6 +13,8 @@ app.set("view engine", "hbs");
 
 hbs.registerPartials(__dirname + "/views/partials");
 
+let toto
+
 const users = [
   {
     name: "Mathieu",
