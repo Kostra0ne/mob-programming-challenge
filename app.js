@@ -12,7 +12,7 @@ app.set("views", __dirname + "/views");
 app.set("view engine", "hbs");
 
 hbs.registerPartials(__dirname + "/views/partials");
-npm;
+
 
 const users = [
   {
@@ -38,20 +38,19 @@ console.log("Hello best team ♥");
 
 //ROUTES
 app.get("/", (req, res) => {
-  res.render("home");
-  {
-    images;
-  }
+  res.render("home", {images})
+
 });
+
 app.get("/my-dev-squad", (req, res) => {
-  res.render("allUsers");
-  {
-    users;
-  }
+  res.render("allUsers", {users})
+ 
 });
+
 app.get("/add-new-ironhacker", (req, res) => {
   res.render("formUser");
 });
+
 app.get("*", (req, res) => {
   res.send("Sorry not found");
 });
