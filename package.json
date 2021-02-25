@@ -1,0 +1,28 @@
+{
+  "name": "mob-programming-challenge",
+  "version": "1.0.0",
+  "description": "You've been randomly assigned to a team.\r Pick one member of your team to fork the provided repo : \r https://github.com/Kostra0ne/mob-programming-challenge. \r He/She will invite the other members of the team as collaborators.  \r The challenge includes several **iterations**.  \r Work as a **team** and pass the **ball**. \r When your turn comes, you are the **driver** and the other are the **navigators**.  \r Push your code with **explicit** commit messages.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon app.js -e .js,.hbs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/myracodes/mob-programming-challenge.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/myracodes/mob-programming-challenge/issues"
+  },
+  "homepage": "https://github.com/myracodes/mob-programming-challenge#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "hbs": "^4.1.1",
+    "mongoose": "^5.11.18"
+  },
+  "devDependencies": {}
+}

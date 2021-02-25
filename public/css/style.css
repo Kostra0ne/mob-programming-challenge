@@ -1,0 +1,21 @@
+@import url("mod.image-gallery.css");
+
+* {
+  vertical-align: baseline;
+  font-weight: inherit;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: inherit;
+  font-size: 100%;
+  border: 0 none;
+  outline: 0;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+  color: lightslategray;
+  border: 1px solid black;
+  margin: 5px;
+}
